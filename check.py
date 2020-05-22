@@ -1,7 +1,7 @@
 import requests
 import argparse
 
-from typing import List
+from typing import List, Optional
 
 # в большинстве случаев можно не использовать
 HEADERS = {
@@ -19,7 +19,7 @@ HEADERS = {
 
 
 class Link:
-    def __init__(self, url, status=None):
+    def __init__(self, url: str, status: Optional[int] = None):
         self.url = url
         self.status = status
 
